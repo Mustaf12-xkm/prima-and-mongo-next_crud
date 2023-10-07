@@ -19,7 +19,7 @@ function page() {
     try {
       const registerPost = await fetch(`${baseURL}/api/posts/`, {
         method: "POST",
-      mode: "no-cors",
+        
         body: JSON.stringify({ title, content, url: imageUrl }),
       });
   

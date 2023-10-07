@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 
 async function detailpage({ params }) {
   const { id } = params;  const baseURL = getBaseUrl();
-  const response = await fetch(`${baseURL}/api/posts/${id}`,{  mode: "no-cors",});
+  const response = await fetch(`${baseURL}/api/posts/${id}`);
   const data = await response.json();
 
 
