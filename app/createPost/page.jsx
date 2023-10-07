@@ -15,7 +15,15 @@ function page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if(content=='' || title=='' || imageUrl==null){
+      return alert('Please enter full information')
+    }
   
+
+
+
+
     try {
       const registerPost = await fetch(`${baseURL}/api/posts/`, {
         method: "POST",

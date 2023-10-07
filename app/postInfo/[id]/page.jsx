@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import DeleteButton from "../../components/deletepost";
 import { getBaseUrl } from "../../utils/baseUrl";
-
+import Image from 'next/image'
 export const dynamic = "force-dynamic";
 
 async function detailpage({ params }) {
@@ -14,11 +14,7 @@ async function detailpage({ params }) {
 
   return (
     <div className="max-w-2xl mx-auto p-4  sm:max-w-md md:max-w-lg lg:max-w-xl">
-      <img
-        src={data.message.url}
-        alt="Info Image"
-        className="w-full h-auto rounded-md mb-4"
-      />
+        <Image width={500} height={500} src={data.message.url}  className="w-full h-auto rounded-md mb-4" alt="image" />
       <div className="flex items-center justify-between mb-4 px-1">
         <h2 className="text-xl font-bold">
           {data.message.title}
