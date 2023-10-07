@@ -17,7 +17,7 @@ const [transition, startTransition] = useTransition();
   const router = useRouter();
     useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${baseURL}/api/posts/${id}`);
+      const response = await fetch(`${baseURL}/api/posts/${id}`,{  mode: "no-cors"});
       const data = await response.json();
       // Update the state with the fetched data
       setContent(data.message.content);
