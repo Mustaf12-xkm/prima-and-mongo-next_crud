@@ -4,7 +4,7 @@ import React, { useState, useTransition } from "react";
 import { useRouter } from 'next/navigation';
 import { getBaseUrl } from "../utils/baseUrl";
 
-
+import Image from 'next/image'
 function page() {
   const [transition, startTransition] = useTransition();
   const [imageUrl, setImageUrl] = useState(null);
@@ -113,7 +113,7 @@ function page() {
               <label className="block text-sm text-gray-600 mb-2">
                 Image Preview:
               </label>
-              <img
+              <Image width={50} height={50}
                 src={imageUrl}
                 alt="Preview"
                 className=" h-16 w-16 object-cover rounded-md"

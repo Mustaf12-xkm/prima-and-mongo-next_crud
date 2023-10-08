@@ -31,7 +31,7 @@ const [transition, startTransition] = useTransition();
   const handleSubmit = async e => {
     e.preventDefault();
 
-    const registerPost = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    const registerPost = await fetch(`${baseURL}/api/posts/${id}`, {
       method: "PUT",
       body: JSON.stringify({ title, content, url: imageUrl })
     });
