@@ -4,6 +4,6 @@ export const getBaseUrl = () => {
         return `${process.env.NEXT_PUBLIC_SITE_URL}`
     }
 
-    return `https://${process.env.NEXT_PUBLIC_PRO_SITE_URL}`;
+    return `${process.env.NEXT_PUBLIC_PRO_SITE_URL}`;
 };
 
